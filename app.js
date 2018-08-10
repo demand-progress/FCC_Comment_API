@@ -8,13 +8,12 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const corsOptions = {
-    origin: 'http://localhost:8008',
+    origin: 'https://freedomfrombigtech.com',
     optionsSuccessStatus: 200,
 };
 
 app.use(cors(corsOptions));
 
-// app.use(cors());
 app.options('*', cors());
 
 routes(app);
