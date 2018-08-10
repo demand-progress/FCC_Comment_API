@@ -1,7 +1,7 @@
 const puppeteer = require('puppeteer');
 const postComment = (reqBody) => {
     return new Promise(async (resolve, reject) => {
-        const { first_name, last_name, email, zip } = reqBody
+        const { first_name, last_name, email, city, state, zip } = reqBody
         const browser = await puppeteer.launch({
             args: ['--no-sandbox', '--disable-setuid-sandbox']
         })
