@@ -1,15 +1,16 @@
-var express = require("express");
-var bodyParser = require("body-parser");
-var routes = require("./routes/routes.js");
-var app = express();
+const express = require('express');
+const bodyParser = require('body-parser');
+
+const app = express();
 const cors = require('cors');
+const routes = require('./routes/routes.js');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const corsOptions = {
-    origin: 'https://freedomfrombigtech.com',
-    optionsSuccessStatus: 200,
+  origin: 'https://freedomfrombigtech.com',
+  optionsSuccessStatus: 200,
 };
 
 app.use(cors(corsOptions));
